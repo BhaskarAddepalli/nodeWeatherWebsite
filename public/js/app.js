@@ -30,8 +30,8 @@ weatherForm.addEventListener('submit',(e)=>{
     if(document.getElementById('icon')){
     document.getElementById('icon').remove()
     }
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>{
-   
+   // fetch('http://localhost:3000/weather?address='+location).then((response)=>{   (or) 
+        fetch('/weather?address='+location).then((response)=>{
 response.json().then((data)=>{
 if(data.error){
  console.log(data.error) 
